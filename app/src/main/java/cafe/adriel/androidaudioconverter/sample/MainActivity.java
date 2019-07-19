@@ -35,7 +35,7 @@ public class MainActivity extends AppCompatActivity {
          *  Update with a valid audio file!
          *  Supported formats: {@link AndroidAudioConverter.AudioFormat}
          */
-        File wavFile = new File(Environment.getExternalStorageDirectory(), "recorded_audio.wav");
+        File wavFile = new File(Environment.getExternalStorageDirectory()+"/AudioRecorder", "recorded_audio.wav");
         IConvertCallback callback = new IConvertCallback() {
             @Override
             public void onSuccess(File convertedFile) {
@@ -49,7 +49,7 @@ public class MainActivity extends AppCompatActivity {
         Toast.makeText(this, "Converting audio file...", Toast.LENGTH_SHORT).show();
         AndroidAudioConverter.with(this)
                 .setFile(wavFile)
-                .setFormat(AudioFormat.MP3)
+                .setFormat(AudioFormat.FLAC)
                 .setCallback(callback)
                 .convert();
     }
