@@ -19,5 +19,5 @@ android {
 }
 
 dependencies {
-    implementation 'com.github.adrielcafe:ffmpeg-android-java:2a627f6ecd@aar'
+    implementation 'com.github.marinalexandru:ffmpeg-android-java:2af2b00ff211288d8dc4031e573cd039ca73d14b@aar'
 }
